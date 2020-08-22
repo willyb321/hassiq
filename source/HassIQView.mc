@@ -32,7 +32,7 @@ class HassIQView extends WatchUi.View {
 			var count = 0;
 			var height = dc.getHeight();
 			var fontHeight = null;
-			
+
 			if (state.textsize == 0) {
 			    fontHeight = dc.getFontHeight(Graphics.FONT_XTINY);
 			} else {

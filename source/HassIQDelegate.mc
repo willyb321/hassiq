@@ -93,7 +93,7 @@ class HassIQDelegate extends WatchUi.BehaviorDelegate {
 		if (domain.equals("automation")) {
 			service = "trigger";
 		} else if (domain.equals("script")) {
-			service = state.getEntityId(entity);			
+			service = state.getEntityId(entity);
 		} else if (domain.equals("scene")) {
 			service = "turn_on";
 		} else {

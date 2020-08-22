@@ -69,7 +69,7 @@ class HassIQState {
 	function setTextsize(textsize) {
 		self.textsize = textsize;
 	}
-	
+
 	function setGroup(group) {
 		self.visibilityGroup = group;
 	}
@@ -79,7 +79,7 @@ class HassIQState {
 			return null;
 		}
 
-		var size = entities.size();		
+		var size = entities.size();
 		var stored = new [size];
 
 		for (var i=0; i<size; ++i) {
@@ -175,7 +175,7 @@ class HassIQState {
 				"code" => code,
 				"client_id" => "https://www.hass-iq.net"
 			};
-			
+
 			code = null;
 		} else {
 			System.println("Requesting token with refresh_token");
@@ -186,7 +186,7 @@ class HassIQState {
 				"client_id" => "https://www.hass-iq.net"
 			};
 		}
-		
+
 		var options = {
 			:method => Comm.HTTP_REQUEST_METHOD_POST,
 			:headers => { "Content-Type" => Comm.REQUEST_CONTENT_TYPE_URL_ENCODED },
@@ -404,7 +404,7 @@ class HassIQState {
 			var title = entity[:name] ? entity[:name] : entity[:entity_id];
 			var color = Graphics.COLOR_WHITE;
 			var font = null;
-			
+
 			if (textsize == 0) {
 			    font = Graphics.FONT_XTINY;
 			} else {
